@@ -6,12 +6,12 @@ import (
 	"unsafe"
 )
 
-// Intrusive declares an interface for interface for an intrusive node.
+// Intrusive declares an interface for an intrusive node.
 type Intrusive interface {
 	Next() *unsafe.Pointer
 }
 
-// IntrusiveNode implements Intrusive.
+// IntrusiveNode default implementation of Intrusive.
 type IntrusiveNode struct {
 	next unsafe.Pointer
 }
@@ -21,7 +21,7 @@ func (d *IntrusiveNode) Next() *unsafe.Pointer {
 	return &d.next
 }
 
-// New creates a new Queue instance
+// New creates a new Queue instance.
 func New() Queue {
 	return Queue{}
 }
