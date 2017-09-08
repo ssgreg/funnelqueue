@@ -6,17 +6,17 @@ import (
 	"unsafe"
 )
 
-// Intrusive TODO
+// Intrusive declares an interface for interface for an intrusive node.
 type Intrusive interface {
 	Next() *unsafe.Pointer
 }
 
-// IntrusiveNode TODO
+// IntrusiveNode implements Intrusive.
 type IntrusiveNode struct {
 	next unsafe.Pointer
 }
 
-// Next TODO
+// Next returns a pointer to the next object.
 func (d *IntrusiveNode) Next() *unsafe.Pointer {
 	return &d.next
 }
