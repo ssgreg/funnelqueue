@@ -1,6 +1,7 @@
 package funnelqueue
 
 import (
+	"fmt"
 	"runtime"
 	"sync"
 	"testing"
@@ -27,7 +28,7 @@ func TestSimplePushPop(t *testing.T) {
 }
 
 func TestMultipleGoroutinesWaitFinish(t *testing.T) {
-	n := 1000
+	n := 500
 	wg := sync.WaitGroup{}
 	wg.Add(n)
 	q := New()
@@ -41,6 +42,7 @@ func TestMultipleGoroutinesWaitFinish(t *testing.T) {
 		}(i)
 	}
 	wg.Wait()
+	fmt.Println("Added!")
 
 	m := make(map[int]int, 0)
 	for {
@@ -57,7 +59,7 @@ func TestMultipleGoroutinesWaitFinish(t *testing.T) {
 }
 
 func TestMultipleGoroutines(t *testing.T) {
-	n := 1000
+	n := 500
 	wg := sync.WaitGroup{}
 	wg.Add(n + 1)
 	q := New()
