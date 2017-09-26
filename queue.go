@@ -75,7 +75,7 @@ func (q *Queue) Pop() interface{} {
 				atomic.StorePointer(&q.front, next)
 				break
 			}
-			// Wait the other goroutine to help us fixing the tail.
+			// Wait for the other goroutine to help us fixing the tail.
 			runtime.Gosched()
 		}
 	}
