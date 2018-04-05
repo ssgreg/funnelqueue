@@ -1,8 +1,8 @@
 # Funnel Queue
 
-[![GoDoc](https://godoc.org/github.com/ssgreg/zerodt?status.svg)](https://godoc.org/github.com/ssgreg/zerodt)
-[![Build Status](https://travis-ci.org/ssgreg/zerodt.svg?branch=master)](https://travis-ci.org/ssgreg/zerodt)
-[![Go Report Status](https://goreportcard.com/badge/github.com/ssgreg/zerodt)](https://goreportcard.com/report/github.com/ssgreg/zerodt)
+[![GoDoc](https://godoc.org/github.com/ssgreg/funnelqueue?status.svg)](https://godoc.org/github.com/ssgreg/funnelqueue)
+[![Build Status](https://travis-ci.org/ssgreg/funnelqueue.svg?branch=master)](https://travis-ci.org/ssgreg/funnelqueue)
+[![Go Report Status](https://goreportcard.com/badge/github.com/ssgreg/funnelqueue)](https://goreportcard.com/report/github.com/ssgreg/funnelqueue)
 
 Package `funnelqueue` implements a FIFO, lock-free, concurrent, multi-producer/single-consumer, linked-list-based queue.
 
